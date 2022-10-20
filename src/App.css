@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(152, 109, 169);
+  height: 100vh;
 }
 
 .memeContainer span{
@@ -21,4 +23,52 @@
 
 .memeContainer img{
   width: 100%;
+}
+
+.memeContainer{
+  color: rgb(51, 46, 46);
+  border: 15px ridge rgb(51, 46, 46);
+};
+
+.logo {
+  height: 100px;
+}
+
+.contLogo{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top: 550px;
+  height: 100px;
+}
+
+button{
+  border: 5px ridge rgb(51, 46, 46);
+  font-size: medium;
+  background-color: rgba(255, 255, 255, 0.608);
+  border-radius: 6px;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 320px;
+
+}
+
+input{
+  border: 5px ridge rgb(51, 46, 46);
+  font-size: medium;
+  background-color: rgba(255, 255, 255, 0.608);
+  border-radius: 6px;
+}
+
+select{
+  border: 5px ridge rgb(51, 46, 46);
+  font-size: medium;
+  background-color: rgba(255, 255, 255, 0.608);
+  border-radius: 6px;
 }

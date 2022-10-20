@@ -1,12 +1,13 @@
 import { useState } from "react";
 import './App.css';
 import html2canvas from "html2canvas";
+import logo from "./img/logo/logo.png";
 
 function App() {
   
   const [linea1, setLinea1] = useState("");
   const [linea2, setLinea2] = useState("");
-  const [img, setImg] = useState("");
+  const [img, setImg] = useState("Bob");
 
   const onChangeLinea1 = function (evento) {
     setLinea1(evento.target.value)
@@ -45,12 +46,17 @@ function App() {
 
       <input onChange={onChangeLinea1} type="text" placeholder="Linea 1"/>
       <input onChange={onChangeLinea2} type="text" placeholder="Linea 2"/>
-      <button onClick={onClickExportar}>Exportar</button>
+      <button onClick={onClickExportar}>dowload</button>
 
       <div className="memeContainer" id="meme">
         <span className="linea1">{linea1}</span>
         <span className="linea2">{linea2}</span>
-        <img src={"/img/" + img + ".jpg" } />
+        <img src={"../memes/"+img+".jpg"}/>
+      </div>
+      <div className="contLogo">
+        <img 
+          src={logo} 
+          className="logo"/>
       </div>
 
     </div>
