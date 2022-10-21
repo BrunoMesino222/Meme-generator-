@@ -2,6 +2,8 @@ import { useState } from "react";
 import './App.css';
 import html2canvas from "html2canvas";
 import logo from "./img/logo/logo.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import downloadIcon from "./img/iconos/download.png";
 
 function App() {
   
@@ -36,22 +38,27 @@ function App() {
   return (
     
     <div className="App">
-      <select onChange={onChangeImg}>
+      <select className="select-css" onChange={onChangeImg}>
         <option value="Bob">Bob</option>
         <option value="Gato">Gato</option>
         <option value="Pepe">Pepe</option>
         <option value="Philosoraptor">Philosoraptor</option>
         <option value="Toy story">Toy story</option>
       </select>
+      <div className="contForm"> 
+      <div>
+      <input className="form-control form-control-sm border" onChange={onChangeLinea1} type="text" placeholder="Linea 1"/>
+      <input className="form-control form-control-sm border"  onChange={onChangeLinea2} type="text" placeholder="Linea 2"/>
+      </div>
+      
+      <button className="btn btn-light button" onClick={onClickExportar}><img className="icono" src={downloadIcon}/></button>
+      </div>
+     
 
-      <input onChange={onChangeLinea1} type="text" placeholder="Linea 1"/>
-      <input onChange={onChangeLinea2} type="text" placeholder="Linea 2"/>
-      <button onClick={onClickExportar}>dowload</button>
-
-      <div className="memeContainer" id="meme">
+      <div className="contMeme" id="meme">
         <span className="linea1">{linea1}</span>
         <span className="linea2">{linea2}</span>
-        <img src={"../memes/"+img+".jpg"}/>
+        <img src={`../memes/${img}.jpg`}/>
       </div>
       <div className="contLogo">
         <img 

@@ -4,9 +4,10 @@
   flex-direction: column;
   background-color: rgb(152, 109, 169);
   height: 100vh;
+  padding: 2px;
 }
 
-.memeContainer span{
+.contMeme span{
   position: absolute;
   font-size: 40px;
   margin-top: 10px;
@@ -17,17 +18,18 @@
   text-align: center;
 }
 
-.memeContainer span:nth-child(2) {
+.contMeme span:nth-child(2) {
   margin-top: 420px;
 }
 
-.memeContainer img{
+.contMeme img{
   width: 100%;
 }
-
-.memeContainer{
+.contMeme{
   color: rgb(51, 46, 46);
-  border: 15px ridge rgb(51, 46, 46);
+  border: 15px ridge rgb(117, 76, 133);
+  margin: 2px;
+  border-radius: 10px
 };
 
 .logo {
@@ -44,31 +46,59 @@
   height: 100px;
 }
 
-button{
-  border: 5px ridge rgb(51, 46, 46);
-  font-size: medium;
-  background-color: rgba(255, 255, 255, 0.608);
-  border-radius: 6px;
-  position: absolute;
-  height: 70px;
-  width: 70px;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-left: 320px;
-
+.button{
+  overflow: hidden;
+  margin-left: 3px;
+  margin-top: 1px;
+  border: 1px black;
 }
 
-input{
-  border: 5px ridge rgb(51, 46, 46);
-  font-size: medium;
-  background-color: rgba(255, 255, 255, 0.608);
-  border-radius: 6px;
+.icono{
+  height: 48px;
+  
 }
 
-select{
-  border: 5px ridge rgb(51, 46, 46);
-  font-size: medium;
-  background-color: rgba(255, 255, 255, 0.608);
-  border-radius: 6px;
+.contForm {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  overflow: hidden;
 }
+
+.select-css {
+  display: inline;
+  width: 19%;
+  border: 2px black;
+  border-radius: 3px;
+  max-width: 100%; 
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+ }
+ .select-css::-ms-expand {
+  display: none;
+ }
+ .select-css:hover {
+  border-color: #888;
+ }
+ .select-css:focus {
+  border-color: rgb(179, 141, 194);
+  box-shadow: 0 0 1px 3px rgba(179, 141, 194);
+  box-shadow: 0 0 0 3px -moz-mac-focusring; 
+  outline: none;
+ }
+ .select-css option {
+  font-weight:normal;
+ }
+
+ .border{
+  border: 1px solid #000000 !important;
+  margin: 1px;
+ }
+
+ .border:focus {
+  box-shadow: 0 0 0 0 rgba(152, 109, 169) !important;
+ }
